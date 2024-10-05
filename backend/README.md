@@ -1,0 +1,6 @@
+- **GitHub Repository**: [GitHub Link](https://github.com/DungNguyen1702/haibazo/tree/master/backend)  
+- **Database (MySQL)**: [Database Link/Instructions](https://github.com/DungNguyen1702/haibazo/blob/master/backend/database/haibazo.sql)  
+- **Database (MySQL)**: [dbdiagram](https://dbdiagram.io/d/Haibazo_SpringIntern_DB-64322f968615191cfa8c697f)
+- **Postman Collection (Local Server)**: [Local Server Postman Collection Link](https://github.com/DungNguyen1702/haibazo/blob/master/backend/postman/TestHaibazoLocal.postman_collection.json)  
+- **Postman Collection (Deployed Server)**: [Deployed Server Postman Collection Link](https://github.com/DungNguyen1702/haibazo/blob/master/backend/postman/TestHaibazoServer.postman_collection.json)
+- **Deployed Server Link**: [haibazo.onrender](https://haibazo.onrender.com/)

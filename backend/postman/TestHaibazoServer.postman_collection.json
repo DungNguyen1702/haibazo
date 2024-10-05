@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "6eab7317-0c0c-41ca-9902-185ac50f17bc",
+		"name": "TestHaibazoServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28834937",
+		"_collection_link": "https://winter-capsule-458378.postman.co/workspace/Team-Workspace~9fdf8a2c-770c-4eb4-84c1-02c58d73456d/collection/28834937-6eab7317-0c0c-41ca-9902-185ac50f17bc?action=share&source=collection_link&creator=28834937"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://haibazo.onrender.com/products?categoryId=1&styleId=10&colorId=14&minPrice=55000&maxPrice=100000&sortBy=id&sortOrder=desc",
+							"protocol": "https",
+							"host": [
+								"haibazo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "1",
+									"description": "optional ( có thể có hoặc không )"
+								},
+								{
+									"key": "styleId",
+									"value": "10",
+									"description": "optional ( có thể có hoặc không )"
+								},
+								{
+									"key": "colorId",
+									"value": "14",
+									"description": "optional ( có thể có hoặc không )"
+								},
+								{
+									"key": "minPrice",
+									"value": "55000",
+									"description": "optional ( có thể có hoặc không )"
+								},
+								{
+									"key": "maxPrice",
+									"value": "100000",
+									"description": "optional ( có thể có hoặc không )"
+								},
+								{
+									"key": "sortBy",
+									"value": "id",
+									"description": "nhận một trong các giá trị : price, name, rating, viewedCount, id"
+								},
+								{
+									"key": "sortOrder",
+									"value": "desc",
+									"description": "nhận 2 giá trị desc hoặc asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://haibazo.onrender.com/products/6"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\" : 80000,\r\n    \"discount\" : 0,\r\n    \"name\" : \"Áo khoác sang trọng\",\r\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \",\r\n    \"images\": [\r\n                    \"https://res.cloudinary.com/deei5izfg/image/upload/v1728060614/3_pva2f1.jpg\",\r\n                    \"https://res.cloudinary.com/deei5izfg/image/upload/v1728060614/5_lhahp6.jpg\",\r\n                    \"https://res.cloudinary.com/deei5izfg/image/upload/v1728060614/1_rg9qi2.jpg\",\r\n                    \"https://res.cloudinary.com/deei5izfg/image/upload/v1728060614/2_gw1gt9.jpg\",\r\n                    \"https://res.cloudinary.com/deei5izfg/image/upload/v1728060614/4_vwro7d.jpg\"\r\n                ],\r\n    \"gender\": \"MALE\",\r\n    \"discountTo\": \"2025-09-10\",\r\n    \"style\": \"Vintage\",\r\n    \"category\": \"Cloting\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://haibazo.onrender.com/products"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProductDetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 20,\r\n    \"color\" : \"#fff\",\r\n    \"size\" : \"2XL\",\r\n    \"productId\" : 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://haibazo.onrender.com/product-details"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://haibazo.onrender.com/products/1"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\" : 7000,\r\n    \"discount\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://haibazo.onrender.com/products/25"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProductDetail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://haibazo.onrender.com/product-details/481"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Constant",
+			"item": [
+				{
+					"name": "GetDataSideBar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://haibazo.onrender.com/constants/sidebar"
+					},
+					"response": []
+				},
+				{
+					"name": "GetListConstant",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://haibazo.onrender.com/constants?type=COLOR",
+							"protocol": "https",
+							"host": [
+								"haibazo",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"constants"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "COLOR",
+									"description": "optional : có thể có hoặc không"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "CreateCart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productDetailId\" : 2,\r\n    \"quantity\" : 10 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://haibazo.onrender.com/carts"
+					},
+					"response": []
+				},
+				{
+					"name": "ListCart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://haibazo.onrender.com/carts"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://haibazo.onrender.com/carts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://haibazo.onrender.com/carts/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://haibazo.onrender.com/"
+			},
+			"response": []
+		}
+	]
+}
